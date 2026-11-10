@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
 };
 
-const FAQS_LA CALERA = [
+const FAQS_LA_CALERA = [
   {
     q: '¿Dónde se realizan exactamente las cabalgatas en La Calera, Cundinamarca?',
     a: 'Nuestras cabalgatas salen desde nuestra finca equina ubicada en la Vereda Salinas del municipio de La Calera, Cundinamarca (Norte de Bogotá y Sabana). Es una zona campestre segura de tradición cafetera y caballista, rodeada de bosques nativos, nacimientos de agua y miradores naturales hacia las montañas del Suroeste cercano.'
@@ -72,7 +72,7 @@ const FAQS_LA CALERA = [
   }
 ];
 
-export default async function CabalgatasLa CaleraPage() {
+export default async function CabalgatasLaCaleraPage() {
   let whatsappNum = WHATSAPP_DEFAULT;
   try {
     const res = await fetch('https://admin.cabalgatas.co/api/ajustes?brandName=cabalgatasbogota.co', {
@@ -179,7 +179,7 @@ export default async function CabalgatasLa CaleraPage() {
       {
         "@type": "FAQPage",
         "@id": `${URL_PAGINA}#faq`,
-        "mainEntity": FAQS_LA CALERA.map((faq) => ({
+        "mainEntity": FAQS_LA_CALERA.map((faq) => ({
           "@type": "Question",
           "name": faq.q,
           "acceptedAnswer": {
@@ -625,7 +625,7 @@ export default async function CabalgatasLa CaleraPage() {
             Preguntas Frecuentes sobre las Cabalgatas en La Calera, Cundinamarca
           </h2>
           <div className="space-y-4">
-            {FAQS_LA CALERA.map((faq, idx) => (
+            {FAQS_LA_CALERA.map((faq, idx) => (
               <details key={idx} open className="group bg-zinc-50 rounded-2xl border border-zinc-200 overflow-hidden">
                 <summary className="flex justify-between items-center font-bold p-5 text-zinc-900 cursor-pointer">
                   {faq.q}
