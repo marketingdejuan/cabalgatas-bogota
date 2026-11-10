@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import PricingSection from '../components/Planes';
 
-const MARCA_SITIO = 'cabalgatamedellin.com';
+const MARCA_SITIO = 'cabalgatasbogota.co';
 
 const FAQS_ES = [
   { 
@@ -19,13 +19,13 @@ const FAQS_ES = [
   },
   { 
     id: 'faq-2', 
-    q: '¿Dónde están ubicados y cuánto tarda llegar desde Medellín?', 
-    a: 'Estamos ubicados en la Vereda Salinas en Caldas, Antioquia (Sur del Valle de Aburrá), a solo 30 minutos de El Poblado y Laureles sin pagar peajes ni sufrir el tráfico del Oriente, con opción de transporte VIP puerta a puerta.' 
+    q: '¿Dónde están ubicados y cuánto tarda llegar desde Bogotá?', 
+    a: 'Estamos ubicados en la Vereda Salinas en La Calera, Cundinamarca (Norte de Bogotá y Sabana), a solo 30 minutos de Usaquén y Parque de la 93 sin pagar peajes ni sufrir el tráfico del Oriente, con opción de transporte VIP puerta a puerta.' 
   },
   { 
     id: 'faq-3', 
     q: '¿Cuánto dura la experiencia y por dónde pasa la ruta?', 
-    a: 'El recorrido a caballo dura aproximadamente 2 horas a través de senderos ecológicos, bosques nativos y miradores en las montañas del sur del Valle de Aburrá. Te recomendamos disponer de unas 2.5 horas en total para incluir la bienvenida, la inducción de seguridad y la asignación de tu caballo ideal.' 
+    a: 'El recorrido a caballo dura aproximadamente 2 horas a través de senderos ecológicos, bosques nativos y miradores en las montañas del sur del Sabana de Bogotá. Te recomendamos disponer de unas 2.5 horas en total para incluir la bienvenida, la inducción de seguridad y la asignación de tu caballo ideal.' 
   },
   { 
     id: 'faq-4', 
@@ -40,16 +40,16 @@ const FAQS_ES = [
 ];
 
 const PAGINAS_INTERLINKING = [
-  { href: '/cabalgatas-caldas', titulo: 'Cabalgatas en Caldas, Antioquia (Guía Oficial)', tag: 'Sede Vereda Salinas' },
-  { href: '/planes-cabalgatas-medellin', titulo: 'Planes y Paquetes de Cabalgatas', tag: 'Paquetes' },
-  { href: '/tour-cuatrimotos-medellin-caldas', titulo: 'Tour de Cuatrimotos en Medellín y Caldas', tag: 'Adrenalina 1.5h' },
-  { href: '/cabalgata-romantica-parejas-medellin', titulo: 'Cabalgata Romántica para Parejas', tag: 'Aniversarios' },
-  { href: '/cabalgatas-ninos-familias-medellin', titulo: 'Cabalgatas para Niños y Familias', tag: 'Desde 3 años' },
-  { href: '/cabalgata-vip-transporte-el-poblado-laureles', titulo: 'Cabalgata VIP con Transporte Incluido', tag: 'El Poblado / Laureles' },
-  { href: '/alquiler-caballos-medellin-precios', titulo: 'Alquiler de Caballos por Horas', tag: 'Tarifas por Tiempo' },
-  { href: '/cabalgatas-grupos-empresas-medellin', titulo: 'Cabalgatas para Grupos y Empresas', tag: 'Eventos 6+ pax' },
-  { href: '/donde-montar-a-caballo-cerca-de-medellin', titulo: 'Dónde Montar a Caballo Cerca de Medellín', tag: 'Comparativa Sur vs Oriente' },
-  { href: '/en-horseback-riding-medellin-tours', titulo: 'Private Horseback Riding Medellin (English)', tag: 'English Tours' }
+  { href: '/cabalgatas-la-calera', titulo: 'Cabalgatas en La Calera, Cundinamarca (Guía Oficial)', tag: 'Sede Vereda Salinas' },
+  { href: '/planes-cabalgatas-bogota', titulo: 'Planes y Paquetes de Cabalgatas', tag: 'Paquetes' },
+  { href: '/tour-cuatrimotos-bogota-la-calera', titulo: 'Tour de Cuatrimotos en Bogotá y La Calera', tag: 'Adrenalina 1.5h' },
+  { href: '/cabalgata-romantica-parejas-bogota', titulo: 'Cabalgata Romántica para Parejas', tag: 'Aniversarios' },
+  { href: '/cabalgatas-ninos-familias-bogota', titulo: 'Cabalgatas para Niños y Familias', tag: 'Desde 3 años' },
+  { href: '/cabalgata-vip-transporte-el-poblado-laureles', titulo: 'Cabalgata VIP con Transporte Incluido', tag: 'Parque de la 93 / Zona T / Usaquén' },
+  { href: '/alquiler-caballos-bogota-precios', titulo: 'Alquiler de Caballos por Horas', tag: 'Tarifas por Tiempo' },
+  { href: '/cabalgatas-grupos-empresas-bogota', titulo: 'Cabalgatas para Grupos y Empresas', tag: 'Eventos 6+ pax' },
+  { href: '/donde-montar-a-caballo-cerca-de-bogota', titulo: 'Dónde Montar a Caballo Cerca de Bogotá', tag: 'Comparativa Sur vs Oriente' },
+  { href: '/en-horseback-riding-bogota-tours', titulo: 'Private Horseback Riding Bogotá (English)', tag: 'English Tours' }
 ];
 
 export default function ClientePage({ initialData }: { initialData: any }) {
@@ -141,13 +141,13 @@ export default function ClientePage({ initialData }: { initialData: any }) {
   const costoGuia = esGrupal ? 0 : (data?.guidePrice ?? 80000);
   const totalCalculado = (jinetesSeguros * precioBase) + costoGuia;
   const tipoCabalgataStr = esGrupal ? 'Grupal (Sin cobro extra de guía)' : 'Privada (Incluye guía exclusivo)';
-  const whatsappNum = (data?.whatsappNumber ? String(data.whatsappNumber) : "573000000000").replace(/\D/g, '');
+  const whatsappNum = (data?.whatsappNumber ? String(data.whatsappNumber) : "573147094325").replace(/\D/g, '');
   const fechaTexto = fechaSegura ? fechaSegura : 'próximo fin de semana';
   const modalidadTexto = esGrupal ? 'Grupal' : 'Privada';
   
   const mensajeReserva = `Hola, quiero reservar el ${fechaTexto} a las ${horaSegura}. Somos ${jinetesSeguros} personas. Modalidad: ${modalidadTexto}. Cotización: $${totalCalculado.toLocaleString()}`;
   const linkCotizador = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(mensajeReserva)}`;
-  const linkGancho = `https://wa.me/${whatsappNum}?text=${encodeURIComponent("¡Hola! Quiero información sobre las cabalgatas en Medellín y Caldas. 🐎")}`;
+  const linkGancho = `https://wa.me/${whatsappNum}?text=${encodeURIComponent("¡Hola! Quiero información sobre las cabalgatas en Bogotá y La Calera. 🐎")}`;
   
   const isValidPhone = telefonoSeguro.length >= 7;
 
@@ -185,14 +185,14 @@ export default function ClientePage({ initialData }: { initialData: any }) {
       <header className="sticky top-0 z-50 bg-zinc-950/95 backdrop-blur-md border-b border-zinc-800 text-white">
         <div className="max-w-5xl mx-auto px-4 py-3.5 flex flex-wrap items-center justify-between gap-3">
           <Link href="/" className="font-extrabold text-base md:text-lg tracking-tight text-white hover:text-amber-400 transition-colors">
-            🐎 Cabalgata Medellín
+            🐎 Cabalgata Bogotá
           </Link>
           <nav aria-label="Navegación Principal" className="flex flex-wrap items-center gap-3 md:gap-5 text-xs md:text-sm font-bold text-zinc-300">
             <a href="#cotizador" className="hover:text-amber-400 transition-colors">Cotizar</a>
-            <Link href="/planes-cabalgatas-medellin" className="hover:text-amber-400 transition-colors">Planes</Link>
-            <Link href="/cabalgatas-caldas" className="hover:text-amber-400 transition-colors">Sede Caldas</Link>
-            <Link href="/tour-cuatrimotos-medellin-caldas" className="hover:text-amber-400 transition-colors">Cuatrimotos</Link>
-            <Link href="/cabalgata-romantica-parejas-medellin" className="hover:text-amber-400 transition-colors hidden sm:inline">Parejas</Link>
+            <Link href="/planes-cabalgatas-bogota" className="hover:text-amber-400 transition-colors">Planes</Link>
+            <Link href="/cabalgatas-la-calera" className="hover:text-amber-400 transition-colors">Sede La Calera</Link>
+            <Link href="/tour-cuatrimotos-bogota-la-calera" className="hover:text-amber-400 transition-colors">Cuatrimotos</Link>
+            <Link href="/cabalgata-romantica-parejas-bogota" className="hover:text-amber-400 transition-colors hidden sm:inline">Parejas</Link>
             <Link href="/blog" className="hover:text-amber-400 transition-colors hidden md:inline">Blog</Link>
             <Link href="/reservar" className="bg-amber-500 hover:bg-amber-400 text-zinc-950 px-3.5 py-1.5 rounded-full font-extrabold transition-colors">
               Reservar
@@ -210,8 +210,8 @@ export default function ClientePage({ initialData }: { initialData: any }) {
           }}
         >
           <Image 
-            src="/cabalgatas-en-medellin-y-caldas.webp" 
-            alt="Cabalgatas en Medellín y Caldas, Antioquia - Jinetes en ruta ecológica" 
+            src="/cabalgatas-en-bogota-y-la-calera.webp" 
+            alt="Cabalgatas en Bogotá y La Calera, Cundinamarca - Jinetes en ruta ecológica" 
             fill 
             priority={true}
             fetchPriority="high"
@@ -224,13 +224,13 @@ export default function ClientePage({ initialData }: { initialData: any }) {
 
         <div className="relative z-20 w-full max-w-4xl mx-auto px-6 pb-24 md:pb-12 text-center md:text-left">
           <span className="inline-block bg-amber-500/20 border border-amber-400/30 text-amber-200 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-            📍 A solo 30 min de El Poblado y Laureles (Sin peajes)
+            📍 A solo 30 min de Usaquén y Parque de la 93 (A 400m antes del Peaje Los Patios)
           </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 leading-tight tracking-tighter drop-shadow-xl">
-            Cabalgatas en Medellín: Rutas Ecológicas y Tradicionales en Caldas, Antioquia
+            Cabalgatas en Bogotá: Rutas Ecológicas y Tradicionales en La Calera, Cundinamarca
           </h1>
           <p className="text-zinc-100 text-lg md:text-2xl font-medium mb-10 tracking-wide drop-shadow-md max-w-2xl">
-            {data.heroSubtitle ? data.heroSubtitle : "Desconéctate de la ciudad a solo 30 minutos del sur de Medellín. Caballos dóciles, guías expertos y seguro médico incluido."}
+            {data.heroSubtitle ? data.heroSubtitle : "Desconéctate de la ciudad a solo 30 minutos del norte de Bogotá (Calle 85 / Usaquén). Caballos dóciles, guías expertos y seguro médico incluido."}
           </p>
           
           <a 
@@ -343,14 +343,14 @@ export default function ClientePage({ initialData }: { initialData: any }) {
         <section className="grid md:grid-cols-2 gap-6 scroll-mt-20">
           <div className="bg-white rounded-[2.5rem] shadow-[0_8px_40px_rgb(0,0,0,0.04)] p-8 border border-zinc-100">
             <h3 className="text-2xl font-extrabold text-zinc-900 mb-6 tracking-tight flex items-center gap-2">
-              <Compass className="w-7 h-7 text-amber-600"/> La Experiencia en Caldas
+              <Compass className="w-7 h-7 text-amber-600"/> La Experiencia en La Calera
             </h3>
             <div className="space-y-6 relative before:absolute before:inset-0 before:ml-[1.1rem] before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-zinc-200 before:to-transparent">
               <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-100 text-amber-600 shadow shrink-0 z-10"><Coffee className="w-4 h-4" /></div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-50/70 p-4 rounded-2xl border border-zinc-100 shadow-sm">
                   <h4 className="font-bold text-zinc-900"><span>1. Llegada Rápida (30 min)</span></h4>
-                  <p className="text-sm text-zinc-500 mt-1">A solo 30 minutos de El Poblado y Laureles en la Vereda Salinas, Caldas (sin peajes ni trancones).</p>
+                  <p className="text-sm text-zinc-500 mt-1">A solo 30 minutos de Usaquén y Parque de la 93 en la Vereda Salinas, La Calera (sin peajes ni trancones).</p>
                 </div>
               </div>
               <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
@@ -364,7 +364,7 @@ export default function ClientePage({ initialData }: { initialData: any }) {
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-100 text-amber-600 shadow shrink-0 z-10"><Camera className="w-4 h-4" /></div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-50/70 p-4 rounded-2xl border border-zinc-100 shadow-sm">
                   <h4 className="font-bold text-zinc-900"><span>3. Recorrido Ecológico (2h)</span></h4>
-                  <p className="text-sm text-zinc-500 mt-1">Ruta guiada por miradores, senderos ecológicos, quebradas y bosques nativos de Antioquia.</p>
+                  <p className="text-sm text-zinc-500 mt-1">Ruta guiada por miradores, senderos ecológicos, quebradas y bosques nativos de Cundinamarca.</p>
                 </div>
               </div>
             </div>
@@ -409,11 +409,11 @@ export default function ClientePage({ initialData }: { initialData: any }) {
             <div className="p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-zinc-50/50 to-white/50">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <h2 className="text-2xl font-extrabold text-zinc-900 tracking-tight">Cabalgata Medellín</h2>
+                  <h2 className="text-2xl font-extrabold text-zinc-900 tracking-tight">Cabalgata Bogotá</h2>
                   <BadgeCheck className="w-6 h-6 text-blue-500 fill-current" aria-hidden="true" />
                 </div>
                 <p className="text-zinc-600 font-medium flex items-center gap-2">
-                  <MapPin className="w-4 h-4 text-amber-600" aria-hidden="true"/> Vereda Salinas, Caldas, Antioquia (A 30 min de El Poblado)
+                  <MapPin className="w-4 h-4 text-amber-600" aria-hidden="true"/> Vereda Salinas, La Calera, Cundinamarca (A 30 min de Parque de la 93)
                 </p>
               </div>
               <div className="flex flex-col items-center md:items-end">
@@ -433,8 +433,8 @@ export default function ClientePage({ initialData }: { initialData: any }) {
             
             <div className="w-full h-[360px] relative bg-zinc-200 border-t border-zinc-100">
               <iframe
-                title="Ubicación Cabalgata Medellín en Vereda Salinas, Caldas, Antioquia"
-                src="https://www.google.com/maps?q=6.0911,-75.6358&hl=es&z=14&output=embed"
+                title="Ubicación Cabalgata Bogotá en Vereda Salinas, La Calera, Cundinamarca"
+                src="https://www.google.com/maps?q=4.67015431,-74.01538018&hl=es&z=14&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -463,7 +463,7 @@ export default function ClientePage({ initialData }: { initialData: any }) {
               {data.gallery.map((item: any) => (
                 <div key={item.id} className="min-w-[280px] md:min-w-[320px] snap-center bg-white rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-zinc-100 overflow-hidden group">
                   <div className="h-56 overflow-hidden relative bg-zinc-100">
-                    <Image src={item.url} alt={item.title ? item.title : 'Foto de Cabalgata en Caldas'} fill quality={70} className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" sizes="(max-width: 768px) 280px, 320px" />
+                    <Image src={item.url} alt={item.title ? item.title : 'Foto de Cabalgata en La Calera'} fill quality={70} className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out" sizes="(max-width: 768px) 280px, 320px" />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent opacity-80"></div>
                     {item.title && <h3 className="absolute bottom-5 left-5 text-white font-bold text-lg tracking-tight">{item.title}</h3>}
                   </div>
@@ -540,7 +540,7 @@ export default function ClientePage({ initialData }: { initialData: any }) {
         )}
 
         <section id="faq" className="pb-8 scroll-mt-20">
-          <h2 className="text-3xl font-extrabold text-zinc-900 mb-10 text-center tracking-tight">Preguntas Frecuentes sobre las Cabalgatas en Medellín</h2>
+          <h2 className="text-3xl font-extrabold text-zinc-900 mb-10 text-center tracking-tight">Preguntas Frecuentes sobre las Cabalgatas en Bogotá</h2>
           <div className="space-y-4 max-w-3xl mx-auto">
             {FAQS_ES.map((faq: any) => (
               <details key={faq.id} open className="group bg-white rounded-2xl border border-zinc-200 cursor-pointer overflow-hidden shadow-sm transition-colors hover:border-zinc-300 [&_summary::-webkit-details-marker]:hidden">
@@ -564,7 +564,7 @@ export default function ClientePage({ initialData }: { initialData: any }) {
               <Compass className="w-7 h-7 text-amber-600" aria-hidden="true" /> Rutas Especializadas y Planes por Tipo de Viajero
             </h2>
             <p className="text-zinc-500 text-sm md:text-base mb-8">
-              Explora nuestras guías detalladas según tu plan ideal en Medellín y Caldas, Antioquia:
+              Explora nuestras guías detalladas según tu plan ideal en Bogotá y La Calera, Cundinamarca:
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {PAGINAS_INTERLINKING.map((item) => (
@@ -592,20 +592,20 @@ export default function ClientePage({ initialData }: { initialData: any }) {
       <footer className="bg-zinc-950 text-zinc-400 py-16 relative z-20 mt-12 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-left mb-12">
           <div>
-            <h3 className="text-white text-xl font-extrabold mb-4 tracking-tight">Cabalgata Medellín</h3>
+            <h3 className="text-white text-xl font-extrabold mb-4 tracking-tight">Cabalgata Bogotá</h3>
             <p className="text-sm text-zinc-400 leading-relaxed mb-4">
-              Rutas ecológicas a caballo y tours en cuatrimoto en el Sur del Valle de Aburrá. Póliza de asistencia médica con Magenta Seguros incluida.
+              Rutas ecológicas a caballo y tours en cuatrimoto en el Norte de Bogotá y Sabana. Póliza de asistencia médica con Magenta Seguros incluida.
             </p>
             <p className="text-xs text-zinc-500 font-semibold">
-              Operador Turístico Autorizado en Antioquia (Cumplimiento Ley 300 de Turismo y RNT).
+              Operador Turístico Autorizado en Cundinamarca (Cumplimiento Ley 300 de Turismo y RNT).
             </p>
           </div>
 
           <div>
             <h4 className="text-white text-base font-bold mb-4">Contacto y Ubicación (NAP)</h4>
             <ul className="space-y-2.5 text-sm text-zinc-400">
-              <li><strong className="text-zinc-200">Dirección:</strong> Vereda Salinas, Caldas, Antioquia, Colombia</li>
-              <li><strong className="text-zinc-200">Referencia:</strong> A 30 min de El Poblado y Laureles (Sin peajes)</li>
+              <li><strong className="text-zinc-200">Dirección:</strong> Vereda Salinas, La Calera, Cundinamarca, Colombia</li>
+              <li><strong className="text-zinc-200">Referencia:</strong> A 30 min de Usaquén y Parque de la 93 (A 400m antes del Peaje Los Patios)</li>
               <li><strong className="text-zinc-200">WhatsApp / Teléfono:</strong> +{whatsappNum}</li>
               <li><strong className="text-zinc-200">Horario:</strong> Lunes a Domingo (Salidas 10:00 AM, 2:00 PM y 4:00 PM)</li>
             </ul>
@@ -614,39 +614,39 @@ export default function ClientePage({ initialData }: { initialData: any }) {
           <div>
             <h4 className="text-white text-base font-bold mb-4">Rutas, Planes y Guías</h4>
             <ul className="space-y-2 text-xs text-zinc-400">
-              <li><Link href="/cabalgatas-caldas" className="text-amber-400 font-bold hover:underline transition-colors">Cabalgatas en Caldas, Antioquia (Guía Oficial)</Link></li>
-              <li><Link href="/planes-cabalgatas-medellin" className="hover:text-amber-400 transition-colors">Planes y Paquetes de Cabalgatas</Link></li>
-              <li><Link href="/tour-cuatrimotos-medellin-caldas" className="hover:text-amber-400 transition-colors">Tour de Cuatrimotos en Medellín y Caldas</Link></li>
-              <li><Link href="/cabalgata-romantica-parejas-medellin" className="hover:text-amber-400 transition-colors">Cabalgata Romántica para Parejas</Link></li>
-              <li><Link href="/cabalgatas-ninos-familias-medellin" className="hover:text-amber-400 transition-colors">Cabalgatas para Niños y Familias</Link></li>
-              <li><Link href="/cabalgata-vip-transporte-el-poblado-laureles" className="hover:text-amber-400 transition-colors">Cabalgata VIP con Transporte (El Poblado)</Link></li>
-              <li><Link href="/alquiler-caballos-medellin-precios" className="hover:text-amber-400 transition-colors">Alquiler de Caballos por Horas</Link></li>
-              <li><Link href="/cabalgatas-grupos-empresas-medellin" className="hover:text-amber-400 transition-colors">Cabalgatas para Grupos y Empresas</Link></li>
-              <li><Link href="/donde-montar-a-caballo-cerca-de-medellin" className="hover:text-amber-400 transition-colors">Dónde Montar a Caballo Cerca de Medellín</Link></li>
-              <li><Link href="/en-horseback-riding-medellin-tours" className="hover:text-amber-400 transition-colors">Private Horseback Riding Tours (EN)</Link></li>
+              <li><Link href="/cabalgatas-la-calera" className="text-amber-400 font-bold hover:underline transition-colors">Cabalgatas en La Calera, Cundinamarca (Guía Oficial)</Link></li>
+              <li><Link href="/planes-cabalgatas-bogota" className="hover:text-amber-400 transition-colors">Planes y Paquetes de Cabalgatas</Link></li>
+              <li><Link href="/tour-cuatrimotos-bogota-la-calera" className="hover:text-amber-400 transition-colors">Tour de Cuatrimotos en Bogotá y La Calera</Link></li>
+              <li><Link href="/cabalgata-romantica-parejas-bogota" className="hover:text-amber-400 transition-colors">Cabalgata Romántica para Parejas</Link></li>
+              <li><Link href="/cabalgatas-ninos-familias-bogota" className="hover:text-amber-400 transition-colors">Cabalgatas para Niños y Familias</Link></li>
+              <li><Link href="/cabalgata-vip-transporte-el-poblado-laureles" className="hover:text-amber-400 transition-colors">Cabalgata VIP con Transporte (Parque de la 93)</Link></li>
+              <li><Link href="/alquiler-caballos-bogota-precios" className="hover:text-amber-400 transition-colors">Alquiler de Caballos por Horas</Link></li>
+              <li><Link href="/cabalgatas-grupos-empresas-bogota" className="hover:text-amber-400 transition-colors">Cabalgatas para Grupos y Empresas</Link></li>
+              <li><Link href="/donde-montar-a-caballo-cerca-de-bogota" className="hover:text-amber-400 transition-colors">Dónde Montar a Caballo Cerca de Bogotá</Link></li>
+              <li><Link href="/en-horseback-riding-bogota-tours" className="hover:text-amber-400 transition-colors">Private Horseback Riding Tours (EN)</Link></li>
             </ul>
           </div>
         </div>
 
         <div className="max-w-4xl mx-auto px-6 pt-8 border-t border-zinc-800/80 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-sm font-medium tracking-wide text-zinc-500">
-            © {new Date().getFullYear()} Cabalgata Medellín (cabalgatamedellin.com). Todos los derechos reservados.
+            © {new Date().getFullYear()} Cabalgata Bogotá (cabalgatasbogota.co). Todos los derechos reservados.
           </p>
           <div className="flex justify-center gap-4">
             <a 
               href="https://www.instagram.com/cabalgataseco" 
               target="_blank" 
               rel="noopener noreferrer" 
-              aria-label="Instagram de Cabalgata Medellín" 
+              aria-label="Instagram de Cabalgata Bogotá" 
               className="bg-zinc-900 p-3 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300 flex items-center justify-center border border-zinc-800"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
             <a 
-              href="https://web.facebook.com/Cabalgatasmedellin" 
+              href="https://web.facebook.com/Cabalgatasbogota" 
               target="_blank" 
               rel="noopener noreferrer" 
-              aria-label="Facebook de Cabalgata Medellín" 
+              aria-label="Facebook de Cabalgata Bogotá" 
               className="bg-zinc-900 p-3 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center border border-zinc-800"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>

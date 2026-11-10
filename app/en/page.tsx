@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import PricingSectionEn from '../../components/PlanesEn';
 
-const MARCA_SITIO = 'cabalgatamedellin.com';
+const MARCA_SITIO = 'cabalgatasbogota.co';
 
 const FAQS_EN = [
   { 
@@ -33,21 +33,21 @@ const FAQS_EN = [
   },
   { 
     id: 'faq-5', 
-    q: 'How far is the ranch from Medellin?', 
-    a: 'We are located in Vereda Salinas, Caldas (South of the Aburrá Valley), approximately 30 minutes by car or Uber from El Poblado and Laureles with zero tolls.' 
+    q: 'How far is the ranch from Bogotá?', 
+    a: 'We are located in Vereda Salinas, La Calera (South of the Aburrá Valley), approximately 30 minutes by car or Uber from Parque de la 93 and Zona T / Usaquén with zero tolls.' 
   }
 ];
 
 const DATOS_BASE_EN = {
-  businessName: 'Medellin Horseback Riding',
-  whatsappNumber: '573000000000',
+  businessName: 'Bogotá Horseback Riding',
+  whatsappNumber: '573147094325',
   basePrice: 100000,
   guidePrice: 80000,
   enableExitIntent: true,
-  heroTitleEn: 'Ecological Horseback Riding in Medellin',
-  heroSubtitleEn: 'Disconnect from the city and live an unforgettable horseback riding experience in the mountains of Antioquia, Colombia.',
+  heroTitleEn: 'Ecological Horseback Riding in Bogotá',
+  heroSubtitleEn: 'Disconnect from the city and live an unforgettable horseback riding experience in the mountains of Cundinamarca, Colombia.',
   urgencyTextEn: 'Small groups for animal welfare — Limited weekend spots',
-  mapAddressEn: 'Vereda Salinas, Caldas, Antioquia (30 mins south of El Poblado)',
+  mapAddressEn: 'Vereda Salinas, La Calera, Cundinamarca (30 mins south of Parque de la 93)',
   googleRating: '5.0',
   googleReviewCount: '150',
   mapEmbedUrl: 'https://maps.google.com',
@@ -56,7 +56,7 @@ const DATOS_BASE_EN = {
       id: 'rev-1',
       author: 'Camila Restrepo',
       rating: 5,
-      textEn: 'An amazing experience! The horses are very well cared for, super gentle, and the mountain views in Caldas are breathtaking.'
+      textEn: 'An amazing experience! The horses are very well cared for, super gentle, and the mountain views in La Calera are breathtaking.'
     },
     {
       id: 'rev-2',
@@ -142,13 +142,13 @@ export default function EnglishPage() {
   const costoGuia = esGrupal ? 0 : (data?.guidePrice ?? 80000);
   const totalCalculado = (jinetes * precioBase) + costoGuia;
   const tipoCabalgataStr = esGrupal ? 'Group Ride (No extra guide fee)' : 'Private Ride (Exclusive guide included)';
-  const whatsappNum = data?.whatsappNumber ? data.whatsappNumber : "573000000000";
+  const whatsappNum = data?.whatsappNumber ? data.whatsappNumber : "573147094325";
   const fechaTexto = fecha ? fecha : 'next weekend';
   const modalidadTexto = esGrupal ? 'Group' : 'Private';
   
   const mensajeCotizador = `Hello, I want to book on ${fechaTexto} at ${hora}. We are ${jinetes} people. Modality: ${modalidadTexto}. Quote: $${totalCalculado.toLocaleString()} COP`;
   const linkCotizador = `https://wa.me/${whatsappNum}?text=${encodeURIComponent(mensajeCotizador)}`;
-  const linkGancho = `https://wa.me/${whatsappNum}?text=${encodeURIComponent("Hello! I want information about the horseback riding tours in Medellin. 🐎")}`;
+  const linkGancho = `https://wa.me/${whatsappNum}?text=${encodeURIComponent("Hello! I want information about the horseback riding tours in Bogotá. 🐎")}`;
   
   const isValidPhone = telefono.trim().length >= 7;
 
@@ -206,8 +206,8 @@ export default function EnglishPage() {
           }}
         >
           <Image 
-            src="/cabalgatas-en-medellin-y-caldas.webp" 
-            alt="Riders enjoying a mountain trail in Caldas, Antioquia near Medellin" 
+            src="/cabalgatas-en-bogota-y-la-calera.webp" 
+            alt="Riders enjoying a mountain trail in La Calera, Cundinamarca near Bogotá" 
             fill 
             priority={true} 
             fetchPriority="high"
@@ -220,13 +220,13 @@ export default function EnglishPage() {
 
         <div className="relative z-20 w-full max-w-4xl mx-auto px-6 pb-24 md:pb-12 text-center md:text-left">
           <span className="inline-block bg-amber-500/20 border border-amber-400/30 text-amber-200 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-4">
-            📍 Just 30 mins from El Poblado & Laureles (Zero tolls)
+            📍 Just 30 mins from Parque de la 93 & Zona T / Usaquén (Zero tolls)
           </span>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight tracking-tighter drop-shadow-xl">
             {data.heroTitleEn ? data.heroTitleEn : "Ecological Horseback Riding"}
           </h1>
           <p className="text-zinc-100 text-xl md:text-2xl font-medium mb-10 tracking-wide drop-shadow-md max-w-2xl">
-            {data.heroSubtitleEn ? data.heroSubtitleEn : "Unique mountain experiences in Antioquia, Colombia."}
+            {data.heroSubtitleEn ? data.heroSubtitleEn : "Unique mountain experiences in Cundinamarca, Colombia."}
           </p>
           <a 
             href={linkGancho} 
@@ -325,7 +325,7 @@ export default function EnglishPage() {
                 <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-amber-100 text-amber-600 shadow shrink-0 z-10"><Coffee className="w-4 h-4" /></div>
                 <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] bg-zinc-50/70 p-4 rounded-2xl border border-zinc-100 shadow-sm">
                   <h4 className="font-bold text-zinc-900">1. Welcome & Briefing</h4>
-                  <p className="text-sm text-zinc-500 mt-1">Arrival at the ranch (30 mins from El Poblado), traditional Colombian coffee, and safety instructions.</p>
+                  <p className="text-sm text-zinc-500 mt-1">Arrival at the ranch (30 mins from Parque de la 93), traditional Colombian coffee, and safety instructions.</p>
                 </div>
               </div>
               <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
@@ -384,10 +384,10 @@ export default function EnglishPage() {
             <div className="p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 bg-gradient-to-r from-zinc-50/50 to-white/50">
               <div>
                 <div className="flex items-center gap-2 mb-2">
-                  <h2 className="text-2xl font-extrabold text-zinc-900 tracking-tight">Medellin Horseback Riding</h2>
+                  <h2 className="text-2xl font-extrabold text-zinc-900 tracking-tight">Bogotá Horseback Riding</h2>
                   <BadgeCheck className="w-6 h-6 text-blue-500 fill-current" />
                 </div>
-                <p className="text-zinc-600 font-medium flex items-center gap-2"><MapPin className="w-4 h-4 text-amber-600"/> {data.mapAddressEn ? data.mapAddressEn : 'Vereda Salinas, Caldas (30 mins from El Poblado)'}</p>
+                <p className="text-zinc-600 font-medium flex items-center gap-2"><MapPin className="w-4 h-4 text-amber-600"/> {data.mapAddressEn ? data.mapAddressEn : 'Vereda Salinas, La Calera (30 mins from Parque de la 93)'}</p>
               </div>
               <div className="flex flex-col items-center md:items-end">
                 <div className="flex items-center gap-3 bg-white px-5 py-3 rounded-2xl shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-zinc-100">
@@ -400,8 +400,8 @@ export default function EnglishPage() {
             
             <div className="w-full h-[360px] relative bg-zinc-200 border-t border-zinc-100">
               <iframe
-                title="Location Medellin Horseback Riding in Vereda Salinas, Caldas"
-                src="https://www.google.com/maps?q=6.0911,-75.6358&hl=en&z=14&output=embed"
+                title="Location Bogotá Horseback Riding in Vereda Salinas, La Calera"
+                src="https://www.google.com/maps?q=4.67015431,-74.01538018&hl=en&z=14&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -467,17 +467,17 @@ export default function EnglishPage() {
 
       <footer className="bg-zinc-950 text-zinc-400 py-16 text-center relative z-20 mt-12 border-t border-zinc-800">
         <div className="max-w-4xl mx-auto px-4">
-          <h3 className="text-white text-2xl font-bold mb-4 tracking-tight">Medellin Horseback Riding — Vereda Salinas, Caldas</h3>
-          <p className="text-sm text-zinc-400 mb-8">Just 30 minutes south of El Poblado & Laureles • Full Medical Insurance Included</p>
+          <h3 className="text-white text-2xl font-bold mb-4 tracking-tight">Bogotá Horseback Riding — Vereda Salinas, La Calera</h3>
+          <p className="text-sm text-zinc-400 mb-8">Just 30 minutes south of Parque de la 93 & Zona T / Usaquén • Full Medical Insurance Included</p>
           <div className="flex justify-center gap-6 mb-10">
             <a href="https://www.instagram.com/cabalgataseco" target="_blank" rel="noreferrer" aria-label="Instagram" className="bg-zinc-900 p-4 rounded-full hover:bg-pink-600 hover:text-white transition-all duration-300 flex items-center justify-center border border-zinc-800">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
             </a>
-            <a href="https://web.facebook.com/Cabalgatasmedellin" target="_blank" rel="noreferrer" aria-label="Facebook" className="bg-zinc-900 p-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center border border-zinc-800">
+            <a href="https://web.facebook.com/Cabalgatasbogota" target="_blank" rel="noreferrer" aria-label="Facebook" className="bg-zinc-900 p-4 rounded-full hover:bg-blue-600 hover:text-white transition-all duration-300 flex items-center justify-center border border-zinc-800">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
             </a>
           </div>
-          <p className="text-sm font-medium tracking-wide text-zinc-500">© {new Date().getFullYear()} Cabalgata Medellín (cabalgatamedellin.com). All rights reserved.</p>
+          <p className="text-sm font-medium tracking-wide text-zinc-500">© {new Date().getFullYear()} Cabalgata Bogotá (cabalgatasbogota.co). All rights reserved.</p>
         </div>
       </footer>
 

@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { ARTICULOS_BLOG_SEO } from '../lib/blogArticulos';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://cabalgatamedellin.com';
+  const baseUrl = 'https://cabalgatasbogota.co';
   const fechaActual = new Date();
 
   const paginasPrincipales: MetadataRoute.Sitemap = [
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/cabalgatas-caldas`,
+      url: `${baseUrl}/cabalgatas-la-calera`,
       lastModified: fechaActual,
       changeFrequency: 'weekly',
       priority: 1.0,
@@ -33,15 +33,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   const slugsSEO = [
-    'planes-cabalgatas-medellin',
-    'tour-cuatrimotos-medellin-caldas',
-    'cabalgata-romantica-parejas-medellin',
-    'cabalgatas-ninos-familias-medellin',
+    'planes-cabalgatas-bogota',
+    'tour-cuatrimotos-bogota-la-calera',
+    'cabalgata-romantica-parejas-bogota',
+    'cabalgatas-ninos-familias-bogota',
     'cabalgata-vip-transporte-el-poblado-laureles',
-    'alquiler-caballos-medellin-precios',
-    'cabalgatas-grupos-empresas-medellin',
-    'donde-montar-a-caballo-cerca-de-medellin',
-    'en-horseback-riding-medellin-tours',
+    'alquiler-caballos-bogota-precios',
+    'cabalgatas-grupos-empresas-bogota',
+    'donde-montar-a-caballo-cerca-de-bogota',
+    'en-horseback-riding-bogota-tours',
     'reservar',
     'consultar',
   ];

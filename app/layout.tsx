@@ -3,16 +3,16 @@ import Script from "next/script";
 import "./globals.css";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 
-const URL_SITIO = 'https://cabalgatamedellin.com';
+const URL_SITIO = 'https://cabalgatasbogota.co';
 const META_PIXEL_ID = '1105267645313250';
 const GA4_ID = 'G-12762T7ZP0';
 const GOOGLE_ADS_ID = 'AW-10958714047';
 
 export const metadata: Metadata = {
   metadataBase: new URL(URL_SITIO),
-  title: 'Cabalgatas en Medellín y Caldas | Planes desde $100.000 (A 30 min del Poblado)',
-  description: 'Cabalgatas ecológicas y tours en cuatrimoto en Caldas, Antioquia, a 30 minutos de El Poblado y Laureles (sin peajes). Caballos dóciles, guías expertos y póliza médica con Magenta Seguros.',
-  keywords: 'cabalgatas en medellin, cabalgatas medellin, cabalgata en caldas antioquia, alquiler de caballos en medellin, tour cuatrimotos medellin, paseos a caballo medellin',
+  title: 'Cabalgatas en Bogotá y La Calera | Planes desde $100.000 (A 30 min del Poblado)',
+  description: 'Cabalgatas ecológicas y tours en cuatrimoto en La Calera, Cundinamarca, a 30 minutos de Usaquén y Parque de la 93 (sin peajes). Caballos dóciles, guías expertos y póliza médica con Magenta Seguros.',
+  keywords: 'cabalgatas en bogota, cabalgatas bogota, cabalgata en caldas cundinamarca, alquiler de caballos en bogota, tour cuatrimotos bogota, paseos a caballo bogota',
   alternates: {
     canonical: URL_SITIO,
     languages: {
@@ -22,10 +22,10 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Cabalgatas en Medellín y Caldas | Planes desde $100.000 (A 30 min del Poblado)',
-    description: 'Rutas ecológicas y tradicionales en Caldas, Antioquia. A solo 30 minutos del sur de Medellín con póliza médica Magenta Seguros incluida.',
+    title: 'Cabalgatas en Bogotá y La Calera | Planes desde $100.000 (A 30 min del Poblado)',
+    description: 'Rutas ecológicas y tradicionales en La Calera, Cundinamarca. A solo 30 minutos del norte de Bogotá (Calle 85 / Usaquén) con póliza médica Magenta Seguros incluida.',
     url: URL_SITIO,
-    siteName: 'Cabalgata Medellín',
+    siteName: 'Cabalgata Bogotá',
     locale: 'es_CO',
     type: 'website',
   },
@@ -37,24 +37,24 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@graph": [
       {
         "@type": ["LocalBusiness", "TouristAttraction"],
-        "@id": "https://cabalgatamedellin.com/#business",
-        "name": "Cabalgata Medellín",
-        "url": "https://cabalgatamedellin.com/",
-        "telephone": "+573000000000",
-        "description": "Cabalgatas ecológicas y tours en cuatrimoto en Caldas, Antioquia, a 30 minutos de Medellín. Caballos dóciles, guías expertos y póliza médica con Magenta Seguros.",
+        "@id": "https://cabalgatasbogota.co/#business",
+        "name": "Cabalgata Bogotá",
+        "url": "https://cabalgatasbogota.co/",
+        "telephone": "+57 314 709 4325",
+        "description": "Cabalgatas ecológicas y tours en cuatrimoto en La Calera, Cundinamarca, a 30 minutos de Bogotá. Caballos dóciles, guías expertos y póliza médica con Magenta Seguros.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Vereda Salinas",
-          "addressLocality": "Caldas",
-          "addressRegion": "Antioquia",
+          "addressLocality": "La Calera",
+          "addressRegion": "Cundinamarca",
           "addressCountry": "CO"
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "6.0911",
-          "longitude": "-75.6358"
+          "latitude": "4.67015431",
+          "longitude": "-74.01538018"
         },
-        "areaServed": { "@type": "City", "name": "Medellín" },
+        "areaServed": { "@type": "City", "name": "Bogotá" },
         "priceRange": "$100.000 - $250.000 COP",
         "offers": [
           {
@@ -83,7 +83,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       },
       {
         "@type": "FAQPage",
-        "@id": "https://cabalgatamedellin.com/#faq",
+        "@id": "https://cabalgatasbogota.co/#faq",
         "mainEntity": [
           {
             "@type": "Question",
@@ -95,10 +95,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           },
           {
             "@type": "Question",
-            "name": "¿Dónde están ubicados y cuánto tarda llegar desde Medellín?",
+            "name": "¿Dónde están ubicados y cuánto tarda llegar desde Bogotá?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Estamos ubicados en la Vereda Salinas en Caldas, Antioquia (Sur del Valle de Aburrá), a solo 30 minutos de El Poblado y Laureles sin pagar peajes, con opción de transporte VIP puerta a puerta."
+              "text": "Estamos ubicados en la Vereda Salinas en La Calera, Cundinamarca (Norte de Bogotá y Sabana), a solo 30 minutos de Usaquén y Parque de la 93 sin pagar peajes, con opción de transporte VIP puerta a puerta."
             }
           },
           {
@@ -106,7 +106,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             "name": "¿Cuánto dura la experiencia y por dónde pasa la ruta?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "El recorrido a caballo dura aproximadamente 2 horas a través de senderos ecológicos, bosques nativos y miradores en las montañas del sur del Valle de Aburrá. Te recomendamos disponer de unas 2.5 horas en total."
+              "text": "El recorrido a caballo dura aproximadamente 2 horas a través de senderos ecológicos, bosques nativos y miradores en las montañas del sur del Sabana de Bogotá. Te recomendamos disponer de unas 2.5 horas en total."
             }
           },
           {

@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const MARCA_SITIO = 'cabalgatamedellin.com';
+const MARCA_SITIO = 'cabalgatasbogota.co';
 
 interface PricingProps {
   basePrice?: number;
@@ -207,7 +207,7 @@ export default function PricingSection({ basePrice: propBasePrice, guidePrice: p
                 </li>
                 <li className="flex items-start text-xs text-zinc-400 bg-zinc-800/50 p-3 rounded-xl mt-2 border border-zinc-700">
                   <span className="mr-2 text-lg leading-none" aria-hidden="true">ℹ</span>
-                  Desde Área Metropolitana (Máximo hasta Laureles)
+                  Desde Área Metropolitana (Máximo hasta Zona T / Usaquén)
                 </li>
               </ul>
               <button 

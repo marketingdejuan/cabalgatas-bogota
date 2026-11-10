@@ -6,7 +6,7 @@ import { notFound } from 'next/navigation';
 import { Home, ChevronRight, Calendar, ArrowRight, Compass, ShieldCheck } from 'lucide-react';
 import { ARTICULOS_BLOG_SEO } from '../../../lib/blogArticulos';
 
-const URL_SITIO = 'https://cabalgatamedellin.com';
+const URL_SITIO = 'https://cabalgatasbogota.co';
 
 export const dynamic = 'force-dynamic';
 export const dynamicParams = true;
@@ -18,14 +18,14 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
 
   if (!articulo) {
     return {
-      title: 'Guía de Cabalgatas en Medellín | Cabalgata Medellín',
+      title: 'Guía de Cabalgatas en Bogotá | Cabalgata Bogotá',
     };
   }
 
   const urlArticulo = `${URL_SITIO}/blog/${articulo.slug}`;
 
   return {
-    title: `${articulo.title} | Cabalgata Medellín`,
+    title: `${articulo.title} | Cabalgata Bogotá`,
     description: articulo.metaDesc,
     alternates: {
       canonical: urlArticulo,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
       title: articulo.title,
       description: articulo.metaDesc,
       url: urlArticulo,
-      siteName: 'Cabalgata Medellín',
+      siteName: 'Cabalgata Bogotá',
       locale: 'es_CO',
       type: 'article',
     },
@@ -58,7 +58,7 @@ export default async function BlogPostPage({ params }: { params: any }) {
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Cabalgatas en Medellín", "item": URL_SITIO },
+          { "@type": "ListItem", "position": 1, "name": "Cabalgatas en Bogotá", "item": URL_SITIO },
           { "@type": "ListItem", "position": 2, "name": "Blog y Guías", "item": `${URL_SITIO}/blog` },
           { "@type": "ListItem", "position": 3, "name": articulo.title, "item": urlArticulo }
         ]
@@ -72,12 +72,12 @@ export default async function BlogPostPage({ params }: { params: any }) {
         "dateModified": "2026-11-05",
         "author": {
           "@type": "Organization",
-          "name": "Cabalgata Medellín",
+          "name": "Cabalgata Bogotá",
           "url": URL_SITIO
         },
         "publisher": {
           "@type": "Organization",
-          "name": "Cabalgata Medellín",
+          "name": "Cabalgata Bogotá",
           "url": URL_SITIO
         },
         "mainEntityOfPage": urlArticulo
@@ -156,8 +156,8 @@ export default async function BlogPostPage({ params }: { params: any }) {
               <div className="flex items-center gap-2 text-green-400 text-xs font-bold uppercase tracking-wider mb-2">
                 <ShieldCheck className="w-4 h-4" /> Póliza Magenta Seguros Incluida
               </div>
-              <h3 className="text-xl font-extrabold mb-1">¿Quieres vivir esta experiencia en Caldas?</h3>
-              <p className="text-zinc-400 text-sm">A solo 30 minutos de El Poblado y Laureles (Sin peajes).</p>
+              <h3 className="text-xl font-extrabold mb-1">¿Quieres vivir esta experiencia en La Calera?</h3>
+              <p className="text-zinc-400 text-sm">A solo 30 minutos de Usaquén y Parque de la 93 (A 400m antes del Peaje Los Patios).</p>
             </div>
             <Link 
               href={articulo.ctaLink} 

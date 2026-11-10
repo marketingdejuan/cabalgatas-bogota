@@ -5,24 +5,24 @@ import { Metadata } from 'next';
 export const revalidate = 60;
 
 // 🔥 CONFIGURACIÓN DE MARCA (Para replicar en los otros sitios solo cambias estas constantes)
-const MARCA_SITIO = 'cabalgatamedellin.com';
-const URL_SITIO = 'https://cabalgatamedellin.com';
+const MARCA_SITIO = 'cabalgatasbogota.co';
+const URL_SITIO = 'https://cabalgatasbogota.co';
 
 // Datos base del sitio (Reemplaza el antiguo documento estático de Firebase)
 const DATOS_BASE = {
-  businessName: 'Cabalgatas Medellín',
-  whatsappNumber: '573000000000',
+  businessName: 'Cabalgatas Bogotá',
+  whatsappNumber: '573147094325',
   basePrice: 100000,
   guidePrice: 80000,
   enableExitIntent: true,
-  heroTitle: 'Cabalgatas Ecológicas en Medellín y Caldas',
-  heroSubtitle: 'Desconéctate de la ciudad y vive una experiencia inolvidable a caballo por las montañas de Antioquia.',
+  heroTitle: 'Cabalgatas Ecológicas en Bogotá y La Calera',
+  heroSubtitle: 'Desconéctate de la ciudad y vive una experiencia inolvidable a caballo por las montañas de Cundinamarca.',
   urgencyText: '¡Últimos cupos disponibles para este fin de semana!',
-  metaTitle: 'Cabalgatas Medellín | Rutas Ecológicas y Seguras en Antioquia',
-  metaDescription: 'Reserva tu cabalgata ecológica en Caldas, Antioquia a solo minutos de Medellín. Caballos dóciles, guías expertos y planes para parejas, familias y grupos.',
-  seoKeywords: 'cabalgatas medellin, cabalgatas en antioquia, cabalgatas caldas, paseo a caballo medellin, planes en pareja medellin',
-  seoOgImage: `${URL_SITIO}/cabalgatas-en-medellin-y-caldas.webp`,
-  mapAddress: 'Caldas, Antioquia (Sur del Valle de Aburrá)',
+  metaTitle: 'Cabalgatas Bogotá | Rutas Ecológicas y Seguras en Cundinamarca',
+  metaDescription: 'Reserva tu cabalgata ecológica en La Calera, Cundinamarca a solo minutos de Bogotá. Caballos dóciles, guías expertos y planes para parejas, familias y grupos.',
+  seoKeywords: 'cabalgatas bogota, cabalgatas en cundinamarca, cabalgatas caldas, paseo a caballo bogota, planes en pareja bogota',
+  seoOgImage: `${URL_SITIO}/cabalgatas-en-bogota-y-la-calera.webp`,
+  mapAddress: 'La Calera, Cundinamarca (Norte de Bogotá y Sabana)',
   googleRating: '5.0',
   googleReviewCount: '150',
   mapEmbedUrl: 'https://maps.google.com',
@@ -31,7 +31,7 @@ const DATOS_BASE = {
       id: 'rev-1',
       author: 'Camila Restrepo',
       rating: 5,
-      text: 'Una experiencia espectacular. Los caballos están súper bien cuidados, son muy nobles y los paisajes en Caldas son hermosos.'
+      text: 'Una experiencia espectacular. Los caballos están súper bien cuidados, son muy nobles y los paisajes en La Calera son hermosos.'
     },
     {
       id: 'rev-2',

@@ -5,19 +5,19 @@ import Link from 'next/link';
 import { Calendar, ArrowRight, Home, Compass } from 'lucide-react';
 import { ARTICULOS_BLOG_SEO } from '../../lib/blogArticulos';
 
-const URL_SITIO = 'https://cabalgatamedellin.com';
+const URL_SITIO = 'https://cabalgatasbogota.co';
 
 export const metadata: Metadata = {
-  title: 'Blog y Guías de Cabalgatas en Medellín | Consejos, Rutas y Precios',
-  description: 'Aprende todo sobre las cabalgatas ecológicas en Medellín y Caldas, Antioquia: consejos para principiantes, qué ropa llevar, rutas seguras para niños y comparativas.',
+  title: 'Blog y Guías de Cabalgatas en Bogotá | Consejos, Rutas y Precios',
+  description: 'Aprende todo sobre las cabalgatas ecológicas en Bogotá y La Calera, Cundinamarca: consejos para principiantes, qué ropa llevar, rutas seguras para niños y comparativas.',
   alternates: {
     canonical: `${URL_SITIO}/blog`,
   },
   openGraph: {
-    title: 'Blog y Guías de Cabalgatas en Medellín | Cabalgata Medellín',
-    description: 'Guías prácticas sobre turismo ecuestre, bienestar animal y rutas a caballo a 30 minutos de El Poblado.',
+    title: 'Blog y Guías de Cabalgatas en Bogotá | Cabalgata Bogotá',
+    description: 'Guías prácticas sobre turismo ecuestre, bienestar animal y rutas a caballo a 30 minutos de Parque de la 93.',
     url: `${URL_SITIO}/blog`,
-    siteName: 'Cabalgata Medellín',
+    siteName: 'Cabalgata Bogotá',
     locale: 'es_CO',
     type: 'website',
   },
@@ -29,13 +29,13 @@ export default async function BlogIndexPage() {
       <header className="bg-zinc-900 text-white py-20 px-6 border-b border-zinc-800">
         <div className="max-w-4xl mx-auto">
           <Link href="/" className="inline-flex items-center gap-2 text-amber-400 text-sm font-bold mb-6 hover:underline">
-            <Home className="w-4 h-4" /> Volver a Cabalgata Medellín
+            <Home className="w-4 h-4" /> Volver a Cabalgata Bogotá
           </Link>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
-            Guías y Blog de Cabalgatas en Medellín
+            Guías y Blog de Cabalgatas en Bogotá
           </h1>
           <p className="text-zinc-300 text-lg max-w-2xl">
-            Consejos prácticos para jinetes principiantes, bienestar equino, qué ropa llevar y las mejores rutas ecológicas en Caldas, Antioquia (a 30 min de El Poblado).
+            Consejos prácticos para jinetes principiantes, bienestar equino, qué ropa llevar y las mejores rutas ecológicas en La Calera, Cundinamarca (a 30 min de Parque de la 93).
           </p>
         </div>
       </header>
@@ -63,7 +63,7 @@ export default async function BlogIndexPage() {
                 </div>
                 <div className="p-7">
                   <div className="text-xs text-zinc-400 font-semibold mb-2">
-                    {post.readTime} • Caldas, Antioquia
+                    {post.readTime} • La Calera, Cundinamarca
                   </div>
                   <h2 className="text-xl font-extrabold text-zinc-900 mb-3 leading-snug">
                     <Link href={`/blog/${post.slug}`} className="hover:text-amber-600 transition-colors">
@@ -92,19 +92,19 @@ export default async function BlogIndexPage() {
             <Compass className="w-7 h-7 text-amber-400" /> ¿Listo para vivir la experiencia en la montaña?
           </h2>
           <p className="text-zinc-300 text-sm md:text-base mb-6">
-            Explora nuestros planes directos en la Vereda Salinas de Caldas, Antioquia (a 30 minutos de El Poblado sin peajes):
+            Explora nuestros planes directos en la Vereda Salinas de La Calera, Cundinamarca (a 30 minutos de Parque de la 93 sin peajes):
           </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm font-bold">
-            <Link href="/planes-cabalgatas-medellin" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
+            <Link href="/planes-cabalgatas-bogota" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
               <span>Planes desde $100.000</span> <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/tour-cuatrimotos-medellin-caldas" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
+            <Link href="/tour-cuatrimotos-bogota-la-calera" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
               <span>Tour de Cuatrimotos</span> <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/cabalgata-romantica-parejas-medellin" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
+            <Link href="/cabalgata-romantica-parejas-bogota" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
               <span>Plan Romántico Parejas</span> <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/cabalgatas-ninos-familias-medellin" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
+            <Link href="/cabalgatas-ninos-familias-bogota" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">
               <span>Cabalgata Niños (3+ años)</span> <ArrowRight className="w-4 h-4" />
             </Link>
             <Link href="/cabalgata-vip-transporte-el-poblado-laureles" className="bg-zinc-800 hover:bg-zinc-700 p-4 rounded-2xl text-amber-400 flex items-center justify-between">

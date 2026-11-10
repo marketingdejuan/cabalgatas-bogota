@@ -2,7 +2,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-const MARCA_SITIO = 'cabalgatamedellin.com';
+const MARCA_SITIO = 'cabalgatasbogota.co';
 
 interface PricingProps {
   basePrice?: number;
@@ -203,7 +203,7 @@ export default function PricingSectionEn({ basePrice: propBasePrice, guidePrice:
                 </li>
                 <li className="flex items-start text-xs text-zinc-400 bg-zinc-800/50 p-3 rounded-xl mt-2 border border-zinc-700">
                   <span className="mr-2 text-lg leading-none" aria-hidden="true">ℹ</span>
-                  From Medellin Metro Area (Up to Laureles/Poblado)
+                  From Bogotá Metro Area (Up to Zona T / Usaquén/Poblado)
                 </li>
               </ul>
               <button 
@@ -258,7 +258,7 @@ export default function PricingSectionEn({ basePrice: propBasePrice, guidePrice:
 
             <div className="snap-center shrink-0 w-[75vw] md:w-[320px] flex flex-col items-center p-8 border border-zinc-100 rounded-[2rem] bg-white shadow-sm hover:border-amber-400 hover:shadow-md transition-all">
               <span className="text-5xl mb-4 drop-shadow-sm" role="img" aria-label="Traditional Poncho Icon">🧣</span>
-              <h4 className="font-extrabold text-xl text-zinc-900 text-center mb-2 tracking-tight">Antioquian Poncho</h4>
+              <h4 className="font-extrabold text-xl text-zinc-900 text-center mb-2 tracking-tight">Cundinamarcan Poncho</h4>
               <p className="text-sm font-medium text-zinc-500 text-center mb-6">Take home the best souvenir photo</p>
               <span className="font-extrabold text-2xl text-zinc-900 mt-auto">$30.000 <span className="text-xs font-bold text-zinc-400">COP</span></span>
             </div>

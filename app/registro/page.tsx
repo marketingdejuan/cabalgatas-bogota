@@ -3,8 +3,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import { PenTool, CheckCircle2, AlertTriangle, Calendar, Map, User, Phone, AtSign, FileText, Users } from 'lucide-react';
 
 // 🔥 CONFIGURACIÓN DE MARCA: Si copias este archivo a otro sitio, solo cambia estas 2 líneas:
-const MARCA_SITIO = 'cabalgatamedellin.com'; // Opciones: 'cabalgatas.co' | 'cabalgatamedellin.com' | 'toursdemedellin.com'
-const NOMBRE_COMERCIAL = 'Cabalgatas Medellín';
+const MARCA_SITIO = 'cabalgatasbogota.co'; // Opciones: 'cabalgatas.co' | 'cabalgatasbogota.co' | 'toursdebogota.com'
+const NOMBRE_COMERCIAL = 'Cabalgatas Bogotá';
 
 export default function WaiverPage() {
   const [form, setForm] = useState({ 
